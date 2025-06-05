@@ -253,16 +253,17 @@ footer {
 
 .profile-image {
   display: block;
-  max-width: 320px;
-  width: 100%;
-  height: auto;
+  width: 320px;
+  height: 500px;
   border-radius: 15px;
   margin: 0 2rem 1.5rem 0;
   box-shadow: 0 0 20px #00ffff;
   float: left;
   transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease, border 0.3s ease;
   filter: grayscale(20%);
-  border: 2px solid transparent;
+  border: none !important;
+  outline: none !important;
+  object-fit: cover;
 }
 
 .profile-image:hover {
