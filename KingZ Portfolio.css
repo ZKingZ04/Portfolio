@@ -1,0 +1,274 @@
+/* Modern Techy style with dark background and neon accents */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+body {
+  font-family: 'Roboto Mono', monospace;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background: #0a0a0a; /* darker background */
+  color: #00ffff; /* neon cyan text */
+}
+
+header {
+  background: #121212;
+  color: #00ffff; /* neon cyan */
+  padding: 1.5rem 1rem;
+  text-align: center;
+  border-bottom: 1px solid #00ffff;
+  box-shadow: 0 0 10px #00ffff;
+}
+
+nav a {
+  color: #00ffff;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #00b8b8;
+  text-shadow: 0 0 8px #00ffff;
+}
+
+section {
+  padding: 2rem 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+  background: #1e1e1e;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.project {
+  background: #222;
+  padding: 1.2rem;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+  text-align: center;
+  font-weight: 500;
+  color: #00ffff;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  border: 1px solid #00ffff;
+}
+
+.project:hover {
+  box-shadow: 0 0 20px #00ffff;
+  transform: scale(1.05);
+}
+
+.project-details-container {
+  max-width: 900px;
+  margin: 1rem auto 2rem auto;
+  padding: 1rem;
+  background: #1e1e1e;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+  color: #e0e0e0;
+}
+
+.project-details {
+  display: none;
+  background: #222;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+  padding: 1rem;
+  text-align: center;
+  color: #00ffff;
+}
+
+.project-details img {
+  max-width: 100%;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 0 10px #00ffff;
+}
+
+.project-details img[alt*="Portrait"] {
+  max-width: 50%;
+  height: auto;
+}
+
+.portfolio-overlays {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.7);
+  display: none; /* Hide overlays by default */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.portfolio-overlay {
+  background: #1e1e1e;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+}
+
+.portfolio-overlay img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.close-overlay {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #00ffff;
+  color: #121212;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.close-overlay:hover {
+  background-color: #00b8b8;
+}
+
+.category-dropdowns-container {
+  max-width: 900px;
+  margin: 1rem auto 2rem auto;
+  padding: 1rem;
+  background: #1e1e1e;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+}
+
+.category-dropdown {
+  display: none;
+  width: 100%;
+  background: #222;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+  padding: 1rem;
+  text-align: center;
+}
+
+.category-dropdown img {
+  max-width: 100%;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+}
+
+footer {
+  background: #121212;
+  color: #00ffff;
+  padding: 1rem;
+  font-size: 0.9rem;
+  border-top: 1px solid #00ffff;
+  text-align: center;
+  box-shadow: 0 0 10px #00ffff;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.personal-details {
+  background: #222;
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 0 10px #00ffff;
+  font-family: 'Roboto Mono', monospace;
+  color: #00ffff;
+  width: 45%;
+}
+
+.personal-details a {
+  color: #00ffff;
+  text-decoration: underline;
+}
+
+.personal-details a:hover {
+  color: #00b8b8;
+  text-shadow: 0 0 8px #00ffff;
+}
+
+#typing-name {
+  border-right: 2px solid #00ffff;
+  padding-right: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  animation: blink 0.75s step-end infinite;
+  color: #00ffff;
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+#filters {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+#filters button, button {
+  background: #00ffff;
+  color: #121212;
+  border: none;
+  margin: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px #00ffff;
+}
+
+#filters button:hover, button:hover {
+  background: #00b8b8;
+  color: #e0e0e0;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #00ffff;
+}
+
+.profile-image {
+  display: block;
+  max-width: 320px;
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  margin: 0 2rem 1.5rem 0;
+  box-shadow: 0 0 20px #00ffff;
+  float: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease, border 0.3s ease;
+  filter: grayscale(20%);
+  border: 2px solid transparent;
+}
+
+.profile-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px #00ffff;
+  filter: grayscale(0%);
+  border: 2px solid #00ffff;
+  border-radius: 20px;
+}
